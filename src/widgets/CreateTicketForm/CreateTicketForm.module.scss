@@ -1,0 +1,62 @@
+.form-container {
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+
+
+    background-color: var(--surface-2);
+    padding: var(--space-4);
+    margin: var(--space-2);
+    border-radius: var(--radius-lg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.title { // TODO: <p> -> <Title>
+    font-size: var(--text-3xl);
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+
+    .input {
+        outline: none;
+        border: none;
+    
+        color: var(--text);
+        padding: var(--space-2);
+        border-radius: var(--radius-sm);
+        background-color: var(--surface);
+
+        &::placeholder {
+            color: var(--text-muted);
+        }
+    }
+
+    .error {
+        padding-left: var(--space-1);
+        font-size: var(--text-xs);
+        color: var(--error);
+    }
+}
+
+.submit-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    color: var(--text);
+    background-color: var(--bg);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2);
+}

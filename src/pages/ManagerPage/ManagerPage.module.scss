@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: var(--space-2);
+}
+
+
+.tickets-container {
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: var(--space-4);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            font-size: var(--text-3xl);
+        }
+    }
+    
+    .tickets {
+        width: 100%;
+        padding: var(--space-2);
+    }
+}
+
+.spacer {
+    width: 100%;
+    height: var(--space-1);
+    margin: var(--space-2) 0;
+    background-color: var(--surface-2);
+}

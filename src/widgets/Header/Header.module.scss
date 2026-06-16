@@ -1,0 +1,27 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--surface);
+    padding: var(--space-4);
+}
+
+.title {
+    font-size: var(--text-xl);
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-2);
+
+    .nav-link {
+        font-size: var(--text-md);
+
+        color: var(--primary);
+
+        &:hover {
+            color: var(--primary-hover);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use "./styles/sizing.scss";
+@use "./styles/theme.scss";
+@use "./styles/fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  // font-size: clamp(14px, 0.4vw + 12px, 18px);
+}
+
+body {
+  position: relative;
+
+  margin: 0;
+
+  // font-family: var(--font-sans), var(--font-mono);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+main {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
