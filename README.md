@@ -89,5 +89,3 @@ npm run lint
 * State management is handled via Redux Toolkit (`store/`)
 * UI is split into reusable components (`shared/ui`) and feature widgets (`widgets`)
 * Styling is done using SCSS modules
-
----
