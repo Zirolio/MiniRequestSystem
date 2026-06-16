@@ -40,7 +40,7 @@ export default function CreateTicketForm() {
                     { errors.description && <p className={styles["error"]}>Description is required.</p> }
                 </div>
                 
-                <input className={styles["submit-btn"]} type="submit" />
+                <button className={styles["submit-btn"]} type="submit">Send</button>
             </form>
         </div>
     );

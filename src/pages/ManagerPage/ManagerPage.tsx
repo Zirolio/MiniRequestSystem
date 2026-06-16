@@ -4,6 +4,7 @@ import Ticket from "@/widgets/Ticket/Ticket";
 import TicketFilter from "@shared/ui/TicketStateSelect/TicketStateSelect";
 import type { TicketState } from "@shared/types/Ticket.types";
 import { setTicketsFilter } from "@store/slices/managerSlice";
+import Spacer from "@shared/ui/Spacer/Spacer";
 
 export default function ManagerPage() {
     const dispatch = useAppDispatch();
@@ -22,7 +23,7 @@ export default function ManagerPage() {
                     <TicketFilter onChange={onFilterChange} includeAll />
                 </div>
 
-                <div className={styles.spacer}></div>
+                <Spacer weight="1" margin="2" color="surface-2" />
 
                 <div className={styles.tickets}>
                     { tickets.map(ticket => {

@@ -1,0 +1,27 @@
+.ticket-state {
+    display: flex;
+    padding: calc(var(--space-1) / 2);
+    font-size: var(--text-xs);
+    border-radius: var(--radius-sm);
+
+    &.new {
+        color: #f44336;
+        background-color: #f4433640;
+        border: 1px solid #f44336;
+    }
+    &.in-progress {
+        color: #ff9800;
+        background-color: #ff980040;
+        border: 1px solid #ff9800;
+    }
+    &.done {
+        color: #4caf50;
+        background-color: #4caf5040;
+        border: 1px solid #4caf50;
+    }
+    &.all {
+        color: var(--surface-2);
+        background-color: var(--surface-2);
+        border: 1px solid var(--surface-2);
+    }
+}

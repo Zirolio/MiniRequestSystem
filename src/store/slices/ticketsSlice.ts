@@ -29,9 +29,16 @@ const ticketsSlice = createSlice({
             if (ticket) {
                 ticket.state = action.payload.state;
             }
+        },
+        editTicketDescription(state, action: PayloadAction<{ id: Ticket["id"], description: Ticket["description"] }>) {
+            const ticket = state.find(ticket => ticket.id === action.payload.id);
+
+            if (ticket) {
+                ticket.description = action.payload.description;
+            }
         }
     }
 });
 
-export const { addTicket, removeTicket, setTicketState } = ticketsSlice.actions;
+export const { addTicket, removeTicket, setTicketState, editTicketDescription } = ticketsSlice.actions;
 export default ticketsSlice.reducer;

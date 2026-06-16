@@ -31,15 +31,23 @@
 
     .input {
         outline: none;
-        border: none;
     
         color: var(--text);
         padding: var(--space-2);
         border-radius: var(--radius-sm);
-        background-color: var(--surface);
+        background-color: var(--input-bg);
 
         &::placeholder {
             color: var(--text-muted);
+        }
+
+        border: 1px solid var(--input-border);
+        transition: border-color 0.2s ease;
+        &:hover {
+            border-color: var(--primary-hover);
+        }
+        &:focus {
+            border-color: var(--primary);
         }
     }
 
@@ -59,4 +67,14 @@
     background-color: var(--bg);
     border-radius: var(--radius-sm);
     padding: var(--space-2);
+
+    border: 1px solid;
+    border-color: var(--input-border);
+    transition: border-color 0.2s ease;
+    &:hover {
+        border-color: var(--primary-hover);
+    }
+    &:focus {
+        border-color: var(--primary);
+    }
 }
