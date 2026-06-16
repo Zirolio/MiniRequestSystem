@@ -59,7 +59,13 @@ export default function Ticket(props: TicketProps) {
                         <>
                             <Spacer type="vertical" color="surface" weight="1" margin="2" />
                             <Button onClick={onRemove} variant="remove" />
-                            { props.mode !== UserMode.MANAGER && <Button onClick={onEdit} variant={state} disabled={state === "save" && description.trim().length === 0} /> }
+                            { props.mode !== UserMode.MANAGER &&
+                                <Button
+                                    onClick={onEdit}
+                                    variant={state}
+                                    disabled={state === "save" && description.trim().length === 0}
+                                />
+                            }
                         </>
                     }
                 </div>

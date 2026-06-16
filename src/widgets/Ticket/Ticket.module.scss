@@ -24,10 +24,14 @@
     
     .title {
         font-size: var(--text-xl);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .right-container {
         display: flex;
+        margin-left: var(--space-2);
         justify-content: center;
         align-items: center;
         gap: var(--space-1);
