@@ -3,7 +3,7 @@ import styles from "./TicketStateSelect.module.scss";
 import type { TicketStateSelectProps } from "./TicketStateSelect.interface";
 import cx from "classix";
 
-export default function TicketStateSelect({ onChange, includeAll, className }: TicketStateSelectProps) {
+export default function TicketStateSelect({ onChange, includeAll, className, value }: TicketStateSelectProps) {
     return (
         <select
             className={cx(styles.container, className)}
@@ -14,9 +14,9 @@ export default function TicketStateSelect({ onChange, includeAll, className }: T
                 }
             }}
         >
-            { includeAll && <option value={"All"}>All</option> }
+            { includeAll && <option value={"All"} selected={value === undefined}>All</option> }
             { Object.values(TicketState).map((state) => (
-                <option className={styles.option} key={state} value={state}>
+                <option className={styles.option} key={state} value={state} selected={value === state}>
                     {state}
                 </option>
             )) }

@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ticketsReducer from "./slices/ticketsSlice";
 import managerReducer from "./slices/managerSlice";
+import userReducer from "./slices/userSlice";
 import { useDispatch, useSelector, type TypedUseSelectorHook } from "react-redux";
 
 const store = configureStore({
     reducer: {
         manager: managerReducer,
-        tickets: ticketsReducer
+        user: userReducer,
+        tickets: ticketsReducer,
     }
 });
 

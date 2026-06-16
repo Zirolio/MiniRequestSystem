@@ -1,17 +1,16 @@
 .spacer {
-    background-color: var(--bg);
+    background-color: var(--spacer-bg);
 }
 
 .horizontal {
     width: 100%;
-    height: var(--weight);
-    margin: var(--margin) 0;
+    height: var(--spacer-weight);
+    margin: var(--spacer-margin) 0;
 }
 
 .vertical {
-    height: 100%;
-    width: var(--weight);
-    margin: 0 var(--margin);
+    width: var(--spacer-weight);
+    margin: 0 var(--spacer-margin);
 
     align-self: stretch;
 }

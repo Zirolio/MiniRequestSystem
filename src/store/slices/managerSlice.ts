@@ -13,11 +13,11 @@ const managerSlice = createSlice({
     name: "manager",
     initialState,
     reducers: {
-        setTicketsFilter(state, action: PayloadAction<ManagerSliceState["ticketsFilter"]>) {
+        setManagerTicketsFilter(state, action: PayloadAction<ManagerSliceState["ticketsFilter"]>) {
             state.ticketsFilter = action.payload;
         }
     }
 });
 
-export const { setTicketsFilter } = managerSlice.actions;
+export const { setManagerTicketsFilter } = managerSlice.actions;
 export default managerSlice.reducer;

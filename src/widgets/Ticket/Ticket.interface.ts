@@ -1,9 +1,7 @@
 import { type Ticket } from "@shared/types/Ticket.types";
+import type { UserMode } from "@shared/types/UserMode.types";
 
-export type TicketProps = | {
+export interface TicketProps {
     target: Ticket;
-    mode: "manager";
-} | {
-    target: Ticket;
-    mode?: "user";
+    mode?: UserMode.USER | UserMode.MANAGER;
 };

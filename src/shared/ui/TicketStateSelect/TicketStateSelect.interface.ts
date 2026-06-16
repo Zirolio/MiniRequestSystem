@@ -1,6 +1,7 @@
 import type { TicketState } from "@shared/types/Ticket.types";
 
 export type TicketStateSelectProps = {
+    value?: TicketState;
     className?: string;
 } & (
     | {

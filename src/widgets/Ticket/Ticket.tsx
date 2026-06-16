@@ -9,6 +9,7 @@ import Spacer from "@shared/ui/Spacer/Spacer";
 import TicketStateIndicator from "@shared/ui/TicketStateIndicator/TicketStateIndicator";
 import Button from "@shared/ui/Button/Button";
 import { useState } from "react";
+import { UserMode } from "@shared/types/UserMode.types";
 
 export default function Ticket(props: TicketProps) {
     const target = props.target;
@@ -26,8 +27,8 @@ export default function Ticket(props: TicketProps) {
     }
 
     const onRemove = () => {
-        if (state === "save") dispatch(removeTicket(target.id));
-        else if (state === "edit") setState("save");
+        if (state === "edit") dispatch(removeTicket(target.id));
+        else if (state === "save") setState("edit");
     }
 
     const onEdit = () => {
@@ -49,17 +50,16 @@ export default function Ticket(props: TicketProps) {
                 <div className={styles["right-container"]}>
                     <TicketStateIndicator state={target.state} />
 
-                    { props.mode === "manager" && <TicketFilter
+                    { props.mode === UserMode.MANAGER && <TicketFilter
                         className={styles["ticket-state-select"]}
                         onChange={(state) => onChangeFilterState(state)}
                     /> }
 
-                    { (props.mode === "manager" || target.state === TicketState.NEW) &&
+                    { (props.mode === UserMode.MANAGER || target.state === TicketState.NEW) &&
                         <>
-                            <Spacer type="vertical" color="bg" weight="1" margin="2" />
-                            <div className={cx(styles["spacer"], styles["v"])}></div>
+                            <Spacer type="vertical" color="surface" weight="1" margin="2" />
                             <Button onClick={onRemove} variant="remove" />
-                            { props.mode !== "manager" && <Button onClick={onEdit} variant={state} disabled={state === "save" && description.trim().length === 0} /> }
+                            { props.mode !== UserMode.MANAGER && <Button onClick={onEdit} variant={state} disabled={state === "save" && description.trim().length === 0} /> }
                         </>
                     }
                 </div>
