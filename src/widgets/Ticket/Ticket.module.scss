@@ -17,12 +17,14 @@
 }
 
 .ticket-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: var(--space-1);
     
     .title {
+        max-width: 100%;
         font-size: var(--text-xl);
         overflow: hidden;
         text-overflow: ellipsis;
@@ -35,6 +37,21 @@
         justify-content: center;
         align-items: center;
         gap: var(--space-1);
+    }
+}
+
+@media (max-width: $bp-sm) {
+    .ticket-header {
+        gap: var(--space-1);
+        flex-direction: column-reverse;
+
+        .title {
+            align-self: flex-start;
+        }
+
+        .right-container {
+            align-self: flex-end;
+        }
     }
 }
 
